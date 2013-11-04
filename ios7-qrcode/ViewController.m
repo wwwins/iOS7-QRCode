@@ -73,15 +73,29 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     
+    if(self.isPaused)
+        return;
+    
     NSString *qrcode = nil;
     for (AVMetadataObject *metadata in metadataObjects) {
         if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode]) {
             qrcode = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
             NSLog(@"qrcode:%@",qrcode);
+            self.isPaused = YES;
+            [self showAlert:qrcode];
             break;
         }
     }
     
+}
+
+- (void)showAlert:(NSString *)showtext {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"info" message:showtext delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.isPaused = NO;
 }
 
 @end
