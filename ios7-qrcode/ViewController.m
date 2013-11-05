@@ -31,7 +31,7 @@
     
     NSError *error = nil;
     
-    AVCaptureSession *session = [[AVCaptureSession alloc]init];
+    AVCaptureSession *session = [[AVCaptureSession alloc] init];
     
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if([device isFocusModeSupported:AVCaptureFocusModeContinuousAutoFocus]){
@@ -58,6 +58,7 @@
     if([session canAddOutput:output]){
         [session addOutput:output];
         [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+
         // setMetadataObjectTypes must be call after addOutput
         [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
     }
