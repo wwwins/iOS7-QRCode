@@ -27,7 +27,7 @@
   
   [[BarcodeManager sharedManager] startCapture:self.view andComplete:^(NSArray *result) {
     NSLog(@">>>%@",result[0]);
-    [self showAlert:result[0]];
+    [[[UIAlertView alloc] initWithTitle:@"info" message:result[0] delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil] show];
   }];
 }
 
@@ -35,11 +35,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)showAlert:(NSString *)showtext {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"info" message:showtext delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
-    [alertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
