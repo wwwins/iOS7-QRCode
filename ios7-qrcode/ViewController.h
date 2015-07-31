@@ -9,8 +9,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
-
-@property BOOL isPaused;
+@interface ViewController : UIViewController
 
 @end

@@ -21,6 +21,7 @@
 		7C1CF4B6182750B9007E005D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1CF498182750B8007E005D /* UIKit.framework */; };
 		7C1CF4BE182750B9007E005D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CF4BC182750B9007E005D /* InfoPlist.strings */; };
 		7C1CF4C0182750B9007E005D /* ios7_qrcodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1CF4BF182750B9007E005D /* ios7_qrcodeTests.m */; };
+		D0922ACB1B6A33A900DF02F8 /* BarcodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0922ACA1B6A33A900DF02F8 /* BarcodeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7C1CF4BB182750B9007E005D /* ios7-qrcodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ios7-qrcodeTests-Info.plist"; sourceTree = "<group>"; };
 		7C1CF4BD182750B9007E005D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C1CF4BF182750B9007E005D /* ios7_qrcodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios7_qrcodeTests.m; sourceTree = "<group>"; };
+		D0922AC91B6A33A900DF02F8 /* BarcodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeManager.h; sourceTree = "<group>"; };
+		D0922ACA1B6A33A900DF02F8 /* BarcodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				7C1CF4AA182750B8007E005D /* ViewController.m */,
 				7C1CF4AC182750B8007E005D /* Images.xcassets */,
 				7C1CF49B182750B8007E005D /* Supporting Files */,
+				D0922AC91B6A33A900DF02F8 /* BarcodeManager.h */,
+				D0922ACA1B6A33A900DF02F8 /* BarcodeManager.m */,
 			);
 			path = "ios7-qrcode";
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				7C1CF4AB182750B8007E005D /* ViewController.m in Sources */,
 				7C1CF4A5182750B8007E005D /* AppDelegate.m in Sources */,
 				7C1CF4A1182750B8007E005D /* main.m in Sources */,
+				D0922ACB1B6A33A900DF02F8 /* BarcodeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +466,7 @@
 				7C1CF4C5182750B9007E005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C1CF4C6182750B9007E005D /* Build configuration list for PBXNativeTarget "ios7-qrcodeTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				7C1CF4C8182750B9007E005D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
